@@ -1,0 +1,36 @@
+<html>
+    <body>
+        <p>Direct child</p>
+        <div>
+            <p>non-direct child</p>
+        </div>
+        <div>
+            <p lang="en fr">non-direct child2</p>
+        </div>
+        <div>
+            <p lang="en-sub cn">non-direct child3</p>
+        </div>
+        <div>
+            <p lang="ens">non-direct child4</p>
+        </div>
+    </body>
+    <style>
+            body p {
+                color: black;
+                font-size: 20px;
+            }
+            body > p {
+                color: red;
+                font-size: 40px;
+            }
+            p[lang="en"]{
+                color: blanchedalmond;
+            }
+            p[lang ~= "en"] {
+                color: green;
+            }
+            p[lang|="en"] {
+                color: aqua;
+            }
+    </style>
+</html>
